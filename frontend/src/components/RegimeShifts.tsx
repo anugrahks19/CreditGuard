@@ -50,7 +50,7 @@ export default function RegimeShifts({ data, changepoints }: Props) {
               contentStyle={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)' }}
               itemStyle={{ color: 'var(--foreground)' }}
               labelStyle={{ color: 'var(--muted-foreground)', marginBottom: '4px' }}
-              formatter={(value: number) => [`$${value.toLocaleString()}`, 'Revenue']}
+              formatter={(value: any) => [`$${Number(value).toLocaleString()}`, 'Revenue']}
             />
             
             <Line 

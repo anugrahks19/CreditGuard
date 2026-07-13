@@ -60,9 +60,9 @@ export default function TrendBreakdown({ data }: Props) {
               contentStyle={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)' }}
               itemStyle={{ color: 'var(--foreground)' }}
               labelStyle={{ color: 'var(--muted-foreground)', marginBottom: '4px' }}
-              formatter={(value: number, name: string) => {
-                if (name === 'Negative Residual (Slump)') return [`$${value.toLocaleString()}`, name];
-                return [`$${value.toLocaleString()}`, name];
+              formatter={(value: any, name: any) => {
+                if (name === 'Negative Residual (Slump)') return [`$${Number(value).toLocaleString()}`, name];
+                return [`$${Number(value).toLocaleString()}`, name];
               }}
             />
             <Legend verticalAlign="top" height={36} iconType="circle" wrapperStyle={{ fontSize: '12px' }}/>
