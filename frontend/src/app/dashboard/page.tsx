@@ -2,7 +2,7 @@ import { msmeApi } from '@/lib/api';
 import Link from 'next/link';
 
 export default async function PortfolioPage() {
-  let msmes = [];
+  let msmes: any[] = [];
   try {
     msmes = await msmeApi.list();
     // Sort by negative velocity (largest drop first), then by absolute health score
