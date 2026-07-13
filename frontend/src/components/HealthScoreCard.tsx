@@ -71,8 +71,8 @@ export default function HealthScoreCard({ data }: Props) {
               />
               <RechartsTooltip 
                 cursor={{ fill: 'var(--muted)' }}
-                contentStyle={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)' }}
-                formatter={(value: number) => [`${value.toFixed(1)} pts`, 'Impact']}
+                contentStyle={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)', color: 'var(--foreground)' }}
+                formatter={(value: any) => [`${Number(value).toFixed(1)} pts`, 'Impact']}
               />
               <ReferenceLine x={0} stroke="var(--border)" />
               <Bar dataKey="value" radius={[0, 4, 4, 0]}>
